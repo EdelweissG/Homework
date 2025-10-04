@@ -1,0 +1,59 @@
+Bass Model Analysis: Transparent TV Adoption
+Project Overview
+This project forecasts the adoption of the LG Signature OLED T – Transparent TV using historical flat-screen TV sales as a reference and applying the Bass Diffusion Model. The analysis includes:
+Historical sales trends for flat-screen TVs in Germany (2006–2020)
+Estimation of Bass model parameters (coefficient of innovation p, coefficient of imitation q, and market potential M)
+Forecasting yearly and cumulative adoption for transparent TVs (2025–2039)
+Fermi-adjusted adoption predictions to account for realistic market constraints
+Visualizations comparing historical flat-screen adoption vs. transparent TV forecast
+Directory Structure
+BassModel_TransparentTV/
+│
+├── data/                     # Datasets used in analysis
+│   └── flat_screen_sales.xlsx
+│   └── forecast_transparent_tv.csv
+│
+├── img/                      # Generated images and plots
+│   └── sales_plot.png
+│   └── prediction_plot.png
+│   └── fermi.png
+│   └── comparison_plot.png
+│
+├── report/                   # Optional: Markdown or PDF report
+│   └── report.pdf
+│   └── report_source.md
+│
+├── scripts/                  # Python scripts
+│   └── script1.py            # Load historical data and plot
+│   └── helper_functions.py   # Bass model functions
+│   └── script2.py            # Model fitting, forecasting, Fermi adjustment, visualizations
+│
+└── readme.md                 # Project documentation
+Setup Instructions
+Clone the repository
+git clone <repository-url>
+cd BassModel_TransparentTV
+Install dependencies
+Make sure you have Python 3.x installed. Then install the required libraries:
+pip install pandas numpy matplotlib scipy
+Folder structure
+Ensure the data/, img/, report/, and scripts/ folders exist in the project root. The scripts will automatically save plots in the img/ folder and forecasts in the data/ folder.
+Usage
+Load historical data and plot
+python3 scripts/script1.py
+This will generate sales_plot.png in img/ showing historical flat-screen TV sales.
+Forecast transparent TV adoption
+python3 scripts/script2.py
+This will:
+Fit the Bass model using historical sales
+Forecast yearly and cumulative adoption (2025–2039)
+Apply Fermi-adjusted adoption
+Generate plots: prediction_plot.png, fermi.png, and comparison_plot.png
+Print key insights such as peak adoption year and five-year cumulative adoption
+References
+Statista (2021), Sales volume of flat-screen TVs in Germany from 2006 to 2020. Retrieved from: https://www.statista.com/statistics/460190/sales-of-flat-screen-tvs-in-germany
+Notes
+All scripts are compatible with Python 3.x.
+Plots are saved automatically in the img/ directory.
+The Fermi-adjusted forecast assumes 75% of the potential market will realistically adopt transparent TVs.
+
